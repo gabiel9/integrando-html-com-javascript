@@ -6,13 +6,18 @@ function validaNome(nomeCompleto) {
 }
 
 form.addEventListener('submit', function(e) {
+    let FormEValido = false;
     e.preventDefault();
 
     const nomeBeneficiario = document.getElementById('nome-beneficiario');
-    if (!validaNome(nomeBeneficiario.value)) {
-        alert('O nome não está completo');
+    const numeroContaBeneficiario = document.getElementById('numero-conta');
+    const valorDeposito = document.getElementById('valor-deposito');
+    const mensagemSucesso = `Montante de: ${valorDeposito} depositando para o cliente: ${nomeBeneficiario} - conta: ${numeroContaBeneficiario}`;
+
+    if (!validaNome(nomeBeneficiario.value )) {
+        alert(mensagemSucesso);
     } else {
-        alert('Tudo certo');
+        alert("Tudo certo");
     }
 })
 
