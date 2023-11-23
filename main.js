@@ -1,25 +1,24 @@
-const form = document.getElementById('form-campo');
-let formValidacao = bMaiorQueA;
+const form = document.getElementById('valid-form');
 
-function validacao(valorB) {
-    return bMaiorQueA.length > campoA;
+let formvalid = false;
+
+function numbervalid(campoA, campoB) {
+    return campoB > campoA;
 }
-
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
+    let campoA = parseFloat(document.getElementById('n1').value);
+    let campoB = parseFloat(document.getElementById('n2').value);
 
-    const campoA = document.getElementById('valor-a');
-    const campoB = document.getElementById('valor-b');
-    
-    const mensagemSucesso = `Parabens o Valor B é maior que o Valor A`;
-
-    formValidacao = validacao(campoA.value)
     if (numbervalid(campoA, campoB)){
-        mensagemSucesso.innerHTML = mensagemSucesso;
-        document.querySelector('.success-message').style.display = 'none';
-
-    } else {
+        document.querySelector('.error-message').style.display = 'none';
+        document.querySelector('.success-message').style.display = 'block';
+        campoA.value = '';
+        campoB.value = '';
+    } 
+    else {
         document.querySelector('.error-message').style.display = 'block';
-        document.querySelector('.success-message').style.display = 'none'; 
+        document.querySelector('.success-message').style.display = 'none';
+        
     }
 });

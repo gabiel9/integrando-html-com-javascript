@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML com JS</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./main.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1>Exercício</h1>
-        <h2>PREENCHA OS CAMBOS "A" e "B"</h2>
-        <form id="form-campo">
-            <input type="number" id="valor-a" required placeholder="Campo A" />
-            <input type="number" id="valor-b" required placeholder="Campo B" />
-            <button id="btn-depositar" type="submit">Enviar</button>
-            <p class="error-message"> 
-                Invalido, tente novamente
-            </p>
-            <p class="success-message">
-                Valido, parabens voce concluiu!
-            </p>
+    <div class="center">
+        <h1>Integrando HTML com JavaScript</h1>
+        <h2>Validação no JavaScript</h2>
+        <form id="valid-form">            
+            <label for="n1"> Campo A </label>
+            <input type="number" id="n1" required placeholder="Campo A" />
+            <label for="n2">Campo B</label>
+            <input type="number" id="n2" required placeholder="Campo B" />
+            <p class="error-message">O valor B precisa ser maior que o valor A </p>
+            <p class="success-message">Formulario enviado com sucesso. </p>
+            <button type="submit">Valide</button>
         </form>
     </div>
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>

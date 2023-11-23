@@ -2,13 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: sans-serif; 
+  
 }
 
 body {
+    display: block;    
 }
 
-.container {
+.center {
     margin: 80px auto;
     max-width: 640px;
     width: 100%;
@@ -27,7 +29,7 @@ input, textarea, button {
 }
 
 button {
-    background-color: #2ecc71;
+    background-color: #0d09ed;
     border: none;
     text-transform: uppercase;
     color: #fff;
@@ -38,21 +40,23 @@ button {
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-color: #6992f2;
 }
 
 .success-message {
     background-color: #27ae60;
-    padding: 16px;
+    font-size: 12px;
+    padding: 8px;
     color: #fff;
+    margin-bottom: 8px;
     display: none;
 }
 
 .error-message {
     font-size: 12px;
     padding: 8px;
-    margin-bottom: 8px;
-    color: #fff;
     background-color: red;
+    color: #fff;
+    margin-bottom: 8px;
     display: none;
 }
